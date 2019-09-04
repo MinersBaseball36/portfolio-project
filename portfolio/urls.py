@@ -19,8 +19,11 @@ from django.urls import path
 # TATE ADDED THESE
 from django.conf import settings
 from django.conf.urls.static import static
+import jobs.views
 
-# TATE ADDED THIS
+# TATE ADDED THIS - THIS IS WHERE YOU ADD DIFFERENT PAGES LIKE HOMEPAGE ETC.
+# Since the homepage contains a lot of jobs it makes since that we would add the homepage to the jobs --> views.py  # noqa
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', jobs.views.home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
