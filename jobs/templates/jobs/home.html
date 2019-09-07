@@ -2,14 +2,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="author" content="">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Tate Bollweg</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
     <!-- Bootstrap core CSS -->  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,15 +37,15 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Tate Bollweg</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Tate Bollweg</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">  <!-- TATE ADDED ML-AUTO TO MOVE NAVBAR TO RIGHT OF PAGE -->
-                <a class="nav-item nav-link" href="#">Twitter</a>
-                <a class="nav-item nav-link" href="#">Resume</a>
-                <a class="nav-item nav-link" href="#">Blog</a>
+                <a class="nav-item nav-link" href= "https://www.linkedin.com/in/tate-bollweg/">LinkedIn</a>
+                <a class="nav-item nav-link" href="{% static 'Tate Bollweg - Fall 2019 Resume.pdf' %}">Resume</a>
+                <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
               </div>
             </div>
           </nav>
@@ -60,6 +60,7 @@
       <p>
         <a href="mailto: tbollweg@gmail.com" class="btn btn-primary my-2">Email Me</a> <!-- TATE ADDED EMAIL WITH MAILTO: IN THE HREF-->
       </p>
+      <img class="img-fluid" src="{% static 'Tate Bollweg - Picture.png' %}" height=250 width=250 />
     </div>
   </section>
 
