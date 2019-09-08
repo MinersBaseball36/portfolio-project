@@ -131,7 +131,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio/static/')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/resume/'  # This '/static/' can be anything that you want to show because it is still going to above^^ directory # noqa
+STATIC_URL = '/static/'  # This '/static/' can be anything that you want to show because it is still going to above^^ directory # noqa
 
 
 # TATE ADDED THIS
@@ -140,6 +140,6 @@ MEDIA_URL = '/media/'
 
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
