@@ -130,16 +130,12 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'portfolio/static/')
 ]
-<<<<<<< HEAD
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-=======
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
->>>>>>> b47b129ecac412e657ed2d67c0dd32a54c09c21d
 STATIC_URL = '/static/'  # This '/static/' can be anything that you want to show because it is still going to above^^ directory # noqa
 
 
 # TATE ADDED THIS
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
