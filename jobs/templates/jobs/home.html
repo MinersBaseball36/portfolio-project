@@ -42,9 +42,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">  <!-- TATE ADDED ML-AUTO TO MOVE NAVBAR TO RIGHT OF PAGE -->
-                <a class="nav-item nav-link" href="#">Twitter</a>
-                <a class="nav-item nav-link" href="#">Resume</a>
-                <a class="nav-item nav-link" href="#">Blog</a>
+                <a class="nav-item nav-link" href= "https://www.linkedin.com/in/tate-bollweg/">LinkedIn</a>
+                <a class="nav-item nav-link" href="{% static 'Tate Bollweg - Fall 2019 Resume.pdf' %}">Resume</a>
+                <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
               </div>
             </div>
           </nav>
@@ -59,6 +59,7 @@
       <p>
         <a href="mailto: tbollweg@gmail.com" class="btn btn-primary my-2">Email Me</a> <!-- TATE ADDED EMAIL WITH MAILTO: IN THE HREF-->
       </p>
+      <img class="img-fluid" src="{% static 'Tate Bollweg - Picture.png' %}" height=250 width=250 />
     </div>
   </section>
 
