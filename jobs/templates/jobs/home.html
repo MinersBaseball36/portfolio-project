@@ -41,16 +41,16 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">  <!-- TATE ADDED ML-AUTO TO MOVE NAVBAR TO RIGHT OF PAGE -->
                 <a class="nav-item nav-link" href= "https://www.linkedin.com/in/tate-bollweg/">LinkedIn</a>
                 <a class="nav-item nav-link" href="{% static 'Tate Bollweg - Fall 2019 Resume.pdf' %}" target="_blank">Resume</a>
                 <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
               </div>
             </div>
-          </nav>
-</header>
-
+        </nav>
+    </header>
+  </body>
 <main role="main">
 
   <section class="jumbotron text-center">
@@ -63,27 +63,6 @@
       <img class="img-fluid" src="{% static 'Tate Bollweg - Picture.png' %}" height=250 width=250 />
     </div>
   </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-
-        <!--TATE ADDED: LOOPING THROUGH ALL JOBS IN DATABASE FROM BACKEND JOBS>VIEWS.PY-->
-        {% for job in jobs.all %}  
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}" />
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>  <!--TATE ADDED: LOOPING THROUGH THE SUMMARY PORTION OF JOBS>MODELS>SUMMARY VARIABLE-->
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-
-      </div>
-    </div>
-  </div>
 
 </main>
 
